@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>Student Management</h1>
+        </header>
+
+        <section class="card">
+
+            <div class="section-header">
+                <h2 id="formTitle">Add Student</h2>
+            </div>
+
+            <form id="studentForm">
+
+                <input type="hidden" id="studentId">
+
+                <div class="form-grid">
+
+                    <label>
+                        First Name
+                        <input
+                            type="text"
+                            id="firstName"
+                            required
+                        >
+                    </label>
+
+                    <label>
+                        Last Name
+                        <input
+                            type="text"
+                            id="lastName"
+                            required
+                        >
+                    </label>
+
+                    <label>
+                        Email
+                        <input
+                            type="email"
+                            id="email"
+                            required
+                        >
+                    </label>
+
+                    <label>
+                        Age
+                        <input
+                            type="number"
+                            id="age"
+                            min="1"
+                            max="120"
+                            required
+                        >
+                    </label>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn primary"
+                        id="submitButton"
+                    >
+                        Add Student
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn secondary hidden"
+                        id="cancelButton"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="card">
+
+            <div class="section-header">
+                <h2>Students</h2>
+            </div>
+
+            <div
+                id="statusMessage"
+                class="status hidden"
+            ></div>
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+                Loading...
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer>
+           Hogwarts School of Witchcraft and Wizardry's Student Management System
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
